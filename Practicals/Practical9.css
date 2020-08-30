@@ -345,7 +345,6 @@
       color: white;
       float: left;
       background-color:lightsalmon;
-      border:1px gray;
       border-radius:10px;
       transition: 0.5s;
       position: relative;
@@ -822,6 +821,8 @@
       color: white;
         background-color:lightsalmon  ;
         border: 1px solid gray;
+
+
     }
     .box:hover {
         background-color: rgb(215, 218, 58);
