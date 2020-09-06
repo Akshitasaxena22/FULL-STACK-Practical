@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <title>Practical-10</title>
+
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+        width: 100%;
+        background: #192a56;
+        height: 70px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar img {
+        width: 120px;
+        height: 50px;
+
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+        transition: .5s;
+        float: right;
+        margin-top: 70px;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 700px;
+        display: block;
+        margin: auto;
+    }
+
+    .content p {
+        text-align: justify;
+        padding-top: 15px;
+    }
+
+    .sidebar {
+        width: 20%;
+        height: 100vh;
+        position: fixed;
+        transition: .5s;
+        top: 70px;
+        left: -100%;
+        background-color: #273c75;
+    }
+
+    .sidebar ul {
+        list-style: none;
+
+    }
+
+    .sidebar ul li {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding: 15px 25px;
+        transition: 0.2s;
+
+    }
+
+    .sidebar ul li a:hover {
+        border-left: 10px solid whitesmoke;
+    }
+
+    .sidebar a i {
+        margin-right: 15px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        margin-top: 220px;
+    }
+
+    .icons i {
+        font-size: 30px;
+        color: whitesmoke;
+    }
+
+    .shwbtn,
+    .hidbtn {
+        font-size: 30px;
+        color: white;
+        transition: 0.5s;
+        position: fixed;
+        top: 14px;
+        left: 50px;
+    }
+
+    .hidbtn {
+        opacity: 0;
+    }
+
+    #check {
+        display: none;
+    }
+
+    #check:checked~.sidebar {
+        left: 0;
+    }
+
+    #check:checked~.shwbtn {
+        opacity: 0;
+    }
+
+    #check:checked~.hidbtn {
+        opacity: 1;
+    }
+
+    #check:checked~.content {
+        width: 80%;
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <img src="../Images/Molde-Logo.jpg" alt="logo">
+    </div>
+    <input type="checkbox" name="" id=check>
+    <label for="check" class="shwbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="check" class="hidbtn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li>
+            <li><a href="#"><i class="fa fa-user"></i><span>About</span></a></li>
+            <li><a href="#"><i class="fa fa-tasks"></i><span>Services</span></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i><span>Blog</span></a></li>
+            <li><a href="#"><i class="fa fa-phone-square"></i><span>Contact Us</span></a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-youtube-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="content">
+        <img src="../Images/Banner.jpg" alt="image">
+        <p> 
+            A full stack web developer is a person who can develop both client and server software. In addition to 
+            mastering HTML and CSS, he/she also knows how to: Program a browser(like using JavaScript, jQuery, 
+            Angular, or Vue) Program a server (like using PHP, ASP, Python, or Node)
+            
+            As the Web has grown more complex and as more becomes possible on the Internet, developers have gotten more 
+            specialized. That means that web development now means a lot of different things depending on what a web 
+            developer specializes in. Here are the three main categories:front end development (the visible parts
+             of a website or app)back end development (the “under the hood” databases and infrastructure)full stack
+              development (a hybrid of both). Full stack can apply to a web stack, mobile stack, or a native 
+              application stack (i.e. software programs for specific devices)
+              Front end developers build the visible parts of websites that users see and interact within their web 
+              browsers.The front end of a website (or web or mobile application) is the part a user sees and directly 
+              interacts with. The front end is built with languages like:HTML CSS JavaScript
+              HTML (HyperText Markup Language) is the backbone of the Web. Every website you visit is built with HTML.
+             It takes care of all the structure and content. HTML5 is the current iteration of HTML on the Web, although
+            sites built with older versions still run fine in your browser.CSS (Cascading Style Sheets) is what controls
+             the way the HTML looks on the page. CSS sets the colors, fonts, background images, and even the way the page 
+            is laid out (you can use CSS to arrange the HTML elements on a page however you want, even if it’s different
+            than the order they’re arranged in the HTML file). CSS3 is the current iteration of CSS on the Web, and it
+            adds a ton of features for things like basic interactivity and animations.
+            Now, you can create a website with just HTML and CSS, but it’s JavaScript that’s the gamechanger
+             (plus, it’s what’scausing all the aforementioned blurriness). To put it simply, JavaScript lets
+              you add in interactivity, more complex animations, and even makes it possible to build fully-featured Web 
+              applications.
+            Back in the day (like 2012), web browsers used to be really bad at interpreting a lot of JavaScript, so adding 
+            complex functionality with JS wasn’t always a good idea. But browsers have gotten much more powerful,
+             making it possible to do with JavaScript what used to be reserved for “back end” programming languages. 
+             And there have been advances in JavaScript itself (including the creation of frameworks like AngularJs, 
+             jQuery, and Node.js). In short, what happened is that what we mean by “front end” development has 
+             radically changed in just a few short years.
+
+            It’s the Internet, what can we say!
+
+            In short, front end developers use HTML, CSS, and JavaScript to code up websites. They’re the ones who take the design and create a functioning website from it. Some sites are only built with HTML, CSS, and JavaScript. Other sites, however, have more code hidden away in the back end of the site,
+             to augment or enhance the front end of the site.
+        </p>
+    </div>
+</body>
+
+</html>
