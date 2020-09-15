@@ -394,9 +394,10 @@ hr{
             display: inline-block;
         }
         .sec-2 a:hover{
-           
+           color: white;
            background-color: yellow;
-        }
+         
+                   }
         .sec-3{
             display: flex;
             justify-content: center;
@@ -427,6 +428,7 @@ hr{
          }
          .sec-3 ul li:nth-child(1):hover{
              background-color: #3b5999;
+             
          }
          .sec-3 ul li:nth-child(2):hover{
             background-color: #55acee;
