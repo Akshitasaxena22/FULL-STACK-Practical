@@ -395,7 +395,7 @@ hr{
         }
         .sec-2 a:hover{
            
-           color: orange;
+           background-color: yellow;
         }
         .sec-3{
             display: flex;
