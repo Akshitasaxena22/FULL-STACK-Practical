@@ -394,7 +394,7 @@ hr{
             display: inline-block;
         }
         .sec-2 a:hover{
-           color: white;
+           color: black;
            background-color: yellow;
          
                    }
